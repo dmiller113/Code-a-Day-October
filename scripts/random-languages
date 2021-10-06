@@ -1,0 +1,6 @@
+#!/bin/bash
+# Generates a random language from a list of languages kept in $KNOWN_LANGUAGES
+# Author: Daniel Miller
+KNOWN_LANGUAGES=("C" "C++" "Clojure" "Elm" "Golang" "Javascript" "Purescript" "Racket" "Ruby" "Rust" "Typescript")
+RANDOM=$$$(date +%s)
+echo "${KNOWN_LANGUAGES[$RANDOM % ${#KNOWN_LANGUAGES[@]}]}"
